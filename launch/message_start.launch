@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="server_message_routing" name="gps_routing" type="gps_routing.py" output="screen"></node>
+	<node pkg="server_message_routing" name="fake_gps_data" type="fake_gps_data.py" output="screen"></node>
+</launch>

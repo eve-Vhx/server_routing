@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(server_message_routing)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -106,10 +106,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES server_message_routing
-#  CATKIN_DEPENDS mavros nav_msgs roscpp rospy sensor_msgs std_msgs
-#  DEPENDS system_lib
+ INCLUDE_DIRS include
+ LIBRARIES server_message_routing
+ CATKIN_DEPENDS mavros nav_msgs roscpp rospy sensor_msgs std_msgs
+ DEPENDS system_lib
 )
 
 ###########
@@ -136,7 +136,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/server_message_routing_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/gps_routing.py)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
